@@ -19,7 +19,7 @@ function Index() {
     <section className="flex min-h-[92vh] flex-col justify-center py-16">
       <p className="meta text-muted-foreground">01 — {profile.location} · Available for internships</p>
       <h1 className="display mt-6 text-[22vw] md:text-[13rem] lg:text-[16rem]">
-        Yves<br />Akoto<span className="text-orange">©</span>
+        Yves<br />Akoto<sup className="ml-2 align-super text-[0.3em] text-orange">©</sup>
       </h1>
       <div className="mt-10 grid gap-10 md:grid-cols-[1.4fr_1fr] md:items-end">
         <p className="display text-4xl text-muted-foreground md:text-6xl">

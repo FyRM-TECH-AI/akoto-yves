@@ -20,7 +20,7 @@ function About() {
     <>
       <PageHeader n="02" kicker="About" title={<>About<span className="text-orange">.</span></>} />
       <p className="display max-w-5xl text-4xl md:text-6xl">
-        II'm {profile.fullName.split(" ").slice(1, 2)} — a curious builder from Benin who moved from{" "}apos;m Yves — a curious builder from Benin who went from{" "}
+        I'm Yves — a curious builder from Benin who went from{" "}
         <span className="text-muted-foreground">science valedictorian</span> to AI engineer.
       </p>
 
