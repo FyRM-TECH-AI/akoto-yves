@@ -1,0 +1,24 @@
+export const meta = {
+  title: "Building an OSINT agent with n8n and LLMs",
+  date: "2026-10-01",
+  summary: "How I automated the hunt for public Requests for Proposals during my internship.",
+  tags: ["AI agents", "n8n", "LLM"],
+}
+
+Public Requests for Proposals are scattered across dozens of portals. Checking them by hand every morning wastes hours — so I built an agent to do it.
+
+## The pipeline
+
+1. **Scrape** — n8n workflows pull new RFPs from public sources on a schedule.
+2. **Analyze** — an LLM reads each one and scores its relevance for the company.
+3. **Deliver** — high-value opportunities are pushed in real time to the team.
+
+```python
+score = llm.rate(rfp.text, profile=company_profile)
+if score > 0.8:
+    notify(team, rfp)
+```
+
+> The best automation is the one nobody notices — it just quietly saves time.
+
+More soon!
