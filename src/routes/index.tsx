@@ -1,24 +1,49 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { profile } from "@/lib/profile";
+import { LinkPreview } from "@/components/LinkPreview";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Yves Akoto — AI Engineer & Developer" },
+      { name: "description", content: "Yves Akoto builds AI agents, automation workflows and web apps from Benin." },
+      { property: "og:title", content: "Yves Akoto — AI Engineer & Developer" },
+      { property: "og:description", content: "AI agents, automation and web apps, built from Benin." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <section className="flex min-h-[92vh] flex-col justify-center py-16">
+      <p className="meta text-muted-foreground">01 — {profile.location} · Available for internships</p>
+      <h1 className="display mt-6 text-[22vw] md:text-[13rem] lg:text-[16rem]">
+        Yves<br />Akoto<sup className="ml-2 align-super text-[0.3em] text-orange">©</sup>
+      </h1>
+      <div className="mt-10 grid gap-10 md:grid-cols-[1.4fr_1fr] md:items-end">
+        <p className="display text-4xl text-muted-foreground md:text-6xl">
+          AI engineer building <span className="text-foreground">agents</span>, automations &{" "}
+          <span className="text-foreground">things that learn.</span>
+        </p>
+        <div className="space-y-6">
+          <p className="text-lg leading-relaxed">
+            Computer Science student at the University of Abomey-Calavi specializing in AI. I turn LLMs,
+            data and code into tools that save people real time.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/projects" className="rounded-full bg-foreground px-6 py-3 font-medium text-background transition-transform hover:scale-105">
+              See my work
+            </Link>
+            <LinkPreview href={profile.github} className="block rounded-full border-2 border-foreground px-6 py-3 font-medium hover:bg-foreground hover:text-background">
+              GitHub
+            </LinkPreview>
+            <LinkPreview href={profile.linkedin} className="block rounded-full border-2 border-foreground px-6 py-3 font-medium hover:bg-foreground hover:text-background">
+              LinkedIn
+            </LinkPreview>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
