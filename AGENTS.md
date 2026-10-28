@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Blog posts are .mdx files in src/content/blog exporting `meta`; loaded via import.meta.glob in src/lib/posts.ts (no backend needed).
+- Portfolio content lives in src/lib/profile.ts so pages stay presentational.
