@@ -17,28 +17,28 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <section className="flex min-h-[92vh] flex-col justify-center py-16">
-      <p className="meta text-muted-foreground">01 — {profile.location} · Available for internships</p>
-      <h1 className="display mt-6 text-[22vw] md:text-[13rem] lg:text-[16rem]">
-        Yves<br />Akoto<sup className="ml-2 align-super text-[0.3em] text-orange">©</sup>
+      <p className="meta text-muted-foreground">{profile.location} · Available for internships</p>
+      <h1 className="display mt-5 text-6xl md:text-8xl lg:text-9xl">
+        Yves Akoto<span className="text-blue">.</span>
       </h1>
       <div className="mt-10 grid gap-10 md:grid-cols-[1.4fr_1fr] md:items-end">
-        <p className="display text-4xl text-muted-foreground md:text-6xl">
+        <p className="display text-3xl text-muted-foreground md:text-4xl">
           AI engineer building <span className="text-foreground">agents</span>, automations &{" "}
           <span className="text-foreground">things that learn.</span>
         </p>
         <div className="space-y-6">
-          <p className="text-lg leading-relaxed">
+          <p className="leading-relaxed">
             Computer Science student at the University of Abomey-Calavi specializing in AI. I turn LLMs,
             data and code into tools that save people real time.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link to="/projects" className="rounded-full bg-foreground px-6 py-3 font-medium text-background transition-transform hover:scale-105">
+            <Link to="/projects" className="rounded-full bg-blue px-6 py-2.5 text-sm font-medium text-on-color transition-transform hover:scale-105">
               See my work
             </Link>
-            <LinkPreview href={profile.github} className="block rounded-full border-2 border-foreground px-6 py-3 font-medium hover:bg-foreground hover:text-background">
+            <LinkPreview href={profile.github} className="block rounded-full border border-foreground/20 px-6 py-2.5 text-sm font-medium transition-colors hover:border-foreground">
               GitHub
             </LinkPreview>
-            <LinkPreview href={profile.linkedin} className="block rounded-full border-2 border-foreground px-6 py-3 font-medium hover:bg-foreground hover:text-background">
+            <LinkPreview href={profile.linkedin} className="block rounded-full border border-foreground/20 px-6 py-2.5 text-sm font-medium transition-colors hover:border-foreground">
               LinkedIn
             </LinkPreview>
           </div>

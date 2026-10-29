@@ -17,14 +17,14 @@ export const Route = createFileRoute("/skills")({
 function Skills() {
   return (
     <>
-      <PageHeader n="05" kicker="Skills" title={<>Toolkit<span className="text-orange">.</span></>} />
+      <PageHeader kicker="Skills" title={<>Toolkit<span className="text-blue">.</span></>} />
       <div className="divide-y border-y">
         {skills.map((g) => (
-          <div key={g.group} className="grid gap-4 py-10 md:grid-cols-[1fr_3fr]">
+          <div key={g.group} className="grid gap-3 py-7 md:grid-cols-[1fr_3fr]">
             <p className="meta text-muted-foreground">{g.group}</p>
-            <p className="display text-4xl leading-tight md:text-6xl">
+            <p className="display text-2xl leading-snug md:text-4xl">
               {g.items.map((s, i) => (
-                <span key={s} className="transition-colors hover:text-orange">
+                <span key={s} className="transition-colors hover:text-blue">
                   {s}{i < g.items.length - 1 && <span className="text-muted-foreground"> / </span>}
                 </span>
               ))}
