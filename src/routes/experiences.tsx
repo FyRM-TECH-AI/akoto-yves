@@ -17,19 +17,19 @@ export const Route = createFileRoute("/experiences")({
 function Experiences() {
   return (
     <>
-      <PageHeader n="03" kicker="Experiences" title={<>Work<span className="text-orange">.</span></>} />
-      <div className="space-y-6">
+      <PageHeader kicker="Experiences" title={<>Work<span className="text-blue">.</span></>} />
+      <div className="space-y-5">
         {experiences.map((x) => (
-          <article key={x.company} className={`rounded-3xl p-8 md:p-12 ${x.color}`}>
-            <div className="flex flex-wrap items-baseline justify-between gap-4">
-              <p className="meta">{x.period}</p>
-              <p className="meta">{x.place}</p>
+          <article key={x.company} className={`rounded-2xl p-7 md:p-10 ${x.color}`}>
+            <div className="flex flex-wrap items-baseline justify-between gap-3">
+              <p className="meta opacity-70">{x.period}</p>
+              <p className="meta opacity-70">{x.place}</p>
             </div>
-            <h2 className="display mt-6 text-5xl md:text-8xl">{x.company}</h2>
-            <p className="mt-2 text-xl font-medium">{x.role}</p>
-            <ul className="mt-8 grid gap-4 md:grid-cols-3">
+            <h2 className="display mt-4 text-3xl md:text-5xl">{x.company}</h2>
+            <p className="mt-1.5 font-medium opacity-90">{x.role}</p>
+            <ul className="mt-7 grid gap-5 md:grid-cols-3">
               {x.points.map((p) => (
-                <li key={p} className="border-t border-current/30 pt-4 leading-relaxed">{p}</li>
+                <li key={p} className="border-t border-current pt-3 text-sm leading-relaxed opacity-90">{p}</li>
               ))}
             </ul>
           </article>
