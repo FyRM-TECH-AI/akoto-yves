@@ -48,7 +48,7 @@ export const experiences = [
     company: "WAOUH MONDE",
     place: "Cotonou, Benin",
     period: "May 2026 — Present",
-    color: "bg-indigo text-on-color",
+    color: "bg-foreground text-background",
     points: [
       "Develop and deploy autonomous AI agents and customer-service automation workflows with n8n and WhatsApp webhooks.",
       "Built an automated OSINT AI agent with n8n and LLMs that scrapes and analyzes public Requests for Proposals, delivering real-time commercial opportunities.",
@@ -60,7 +60,7 @@ export const experiences = [
     company: "HOMINTEC Engineering Services",
     place: "Cotonou, Benin",
     period: "Jun 2025 — Jul 2025",
-    color: "bg-yellow text-foreground",
+    color: "bg-blue text-on-color",
     points: [
       "Leveraged generative AI APIs to build a text summarization app with robust error handling and secure API key management.",
       "Designed an end-to-end multimodal system converting audio into AI-generated images, bridging audio processing and computer vision.",
@@ -73,7 +73,7 @@ export const projects = [
     name: "VRP Optimization System",
     stack: ["Python", "PostgreSQL"],
     period: "Feb — Mar 2026",
-    color: "bg-orange text-foreground",
+    color: "bg-subtle text-foreground",
     desc: "An optimization engine for complex vehicle routing and logistics, using metaheuristics and search algorithms to maximize fleet efficiency under operational constraints.",
   },
   {
