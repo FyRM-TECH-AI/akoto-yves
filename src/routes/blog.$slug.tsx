@@ -27,12 +27,18 @@ function PostPage() {
   const { Component, meta } = post;
   return (
     <article className="mx-auto max-w-3xl pt-16 md:pt-24">
-      <Link to="/blog" className="meta text-muted-foreground hover:text-foreground">← All posts</Link>
+      <Link to="/blog" className="meta text-muted-foreground hover:text-foreground">
+        ← All posts
+      </Link>
       <p className="meta mt-10 text-muted-foreground">{meta.date}</p>
       <h1 className="display mt-3 text-4xl md:text-5xl">{meta.title}</h1>
       {meta.tags && (
         <div className="mt-5 flex flex-wrap gap-2">
-          {meta.tags.map((t) => <span key={t} className="meta rounded-full bg-subtle px-3 py-1">{t}</span>)}
+          {meta.tags.map((t) => (
+            <span key={t} className="meta rounded-full bg-subtle px-3 py-1">
+              {t}
+            </span>
+          ))}
         </div>
       )}
       <div className="prose-post mt-12">

@@ -1,35 +1,39 @@
 # Orbiting Career Story
 
-I want you to build my portfolio .
-It should include the following sections :
-- Home : presenting myself
-- About : presenting my education, my certificates (in an infinite scrolling hero)
-- Experiences
-- Projects
-- Skills
-And a page for my blog to post my work where I can upload my posts with .mdx files
+Personal portfolio of Yves Akoto, AI engineer and developer.
 
-I want that on mouse hover on the links to my github and linkedin, a web preview of them is shown
+- **Home** — introduction
+- **About** — education and certificates (infinite-scrolling gallery)
+- **Experiences**
+- **Projects**
+- **Skills**
+- **Blog** — posts written as `.mdx` files
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://orbiting-career-story.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/90fff1ac-36dc-4093-9b51-2007f911526a).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Hovering the GitHub / LinkedIn links shows a live screenshot preview of the target page.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires [Bun](https://bun.sh); the repo ships `bun.lock`.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun run dev      # http://localhost:8080
 ```
+
+| Command           | What it does                                           |
+| ----------------- | ------------------------------------------------------ |
+| `bun run dev`     | Vite dev server                                        |
+| `bun run build`   | Production build — client + Nitro server in `.output/` |
+| `bun run start`   | Run the built server (`.output/server/index.mjs`)      |
+| `bun run preview` | Preview the production build                           |
+| `bun run lint`    | ESLint (includes Prettier checks)                      |
+| `bun run format`  | Prettier write                                         |
+| `bun run test`    | Vitest                                                 |
+
+Typecheck: `bunx tsc --noEmit`.
+
+## Content
+
+- Portfolio data: `src/lib/profile.ts`
+- Blog posts: `src/content/blog/*.mdx`, each exporting `meta` (`title`, `date`, `summary?`, `tags?`); the filename is the URL slug.
+- Certificate images: `public/certs/`.

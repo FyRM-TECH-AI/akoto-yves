@@ -1,17 +1,9 @@
-import c1 from "@/assets/certs/cert1.jpg.asset.json";
-import c2 from "@/assets/certs/cert2.jpg.asset.json";
-import c3 from "@/assets/certs/cert3.jpg.asset.json";
-import c4 from "@/assets/certs/cert4.jpg.asset.json";
-import c5 from "@/assets/certs/cert5.jpg.asset.json";
-import c6 from "@/assets/certs/cert6.jpg.asset.json";
-
 export const profile = {
   name: "Yves Akoto",
   fullName: "Akotchayé Freedom Y. Godson AKOTO",
   role: "AI Engineer & Developer",
   email: "akotchaye07@gmail.com",
   phone: "+229 01 96 70 59 54",
-  location: "Abomey-Calavi, Benin",
   github: "https://github.com/yvesgodson",
   linkedin: "https://www.linkedin.com/in/yves-akoto",
 };
@@ -20,7 +12,7 @@ export const education = [
   {
     school: "University of Abomey-Calavi",
     place: "Abomey-Calavi, Benin",
-    degree: "Computer Science — 3rd year, AI specialization",
+    degree: "Computer Science , AI & ML specialization",
     period: "Sep 2023 — Present",
     notes: [],
   },
@@ -29,17 +21,47 @@ export const education = [
     place: "Niamey, Niger",
     degree: "High School Diploma in Science & Mathematics",
     period: "Sep 2022 — Jun 2023",
-    notes: ["Valedictorian", "Graduated with Honors"],
+    notes: [],
   },
 ];
 
 export const certificates = [
-  { title: "Fundamentals of LLMs", issuer: "Hugging Face", date: "Sep 2026", img: c1.url },
-  { title: "Aspire Leaders Program", issuer: "Aspire Institute", date: "Sep 2026", img: c2.url },
-  { title: "Intro to HTML, CSS & JavaScript", issuer: "IBM · Coursera", date: "Jun 2026", img: c3.url },
-  { title: "Intro to Project Management", issuer: "IBM · Coursera", date: "Jun 2026", img: c4.url },
-  { title: "Intro to Software Engineering", issuer: "IBM · Coursera", date: "Jun 2026", img: c5.url },
-  { title: "Excel Fundamentals for Data Analysis", issuer: "Macquarie · Coursera", date: "Jun 2026", img: c6.url },
+  {
+    title: "Fundamentals of LLMs",
+    issuer: "Hugging Face",
+    date: "Sep 2026",
+    img: "/certs/cert1.jpg",
+  },
+  {
+    title: "Aspire Leaders Program",
+    issuer: "Aspire Institute",
+    date: "Sep 2026",
+    img: "/certs/cert2.jpg",
+  },
+  {
+    title: "Intro to HTML, CSS & JavaScript",
+    issuer: "IBM · Coursera",
+    date: "Jun 2026",
+    img: "/certs/cert3.jpg",
+  },
+  {
+    title: "Intro to Project Management",
+    issuer: "IBM · Coursera",
+    date: "Jun 2026",
+    img: "/certs/cert4.jpg",
+  },
+  {
+    title: "Intro to Software Engineering",
+    issuer: "IBM · Coursera",
+    date: "Jun 2026",
+    img: "/certs/cert5.jpg",
+  },
+  {
+    title: "Excel Fundamentals for Data Analysis",
+    issuer: "Macquarie · Coursera",
+    date: "Jun 2026",
+    img: "/certs/cert6.jpg",
+  },
 ];
 
 export const experiences = [
@@ -86,8 +108,14 @@ export const projects = [
 ];
 
 export const skills = [
-  { group: "Languages", items: ["Python", "R"] },
+  { group: "Languages", items: ["Python", "R", "Javascript"] },
   { group: "Frameworks", items: ["React", "Next.js", "Flask", "FastAPI"] },
-  { group: "Libraries", items: ["Pandas", "NumPy", "Matplotlib", "LangChain", "TensorFlow", "PyTorch", "Streamlit"] },
-  { group: "Tools", items: ["Git", "GitHub", "GitLab", "Docker", "n8n", "VS Code", "Zed", "PyCharm"] },
+  {
+    group: "Libraries",
+    items: ["Pandas", "NumPy", "Matplotlib", "LangChain", "TensorFlow", "PyTorch", "Streamlit"],
+  },
+  {
+    group: "Tools",
+    items: ["Git", "GitHub", "GitLab", "Docker", "Excel"],
+  },
 ];

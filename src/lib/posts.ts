@@ -8,7 +8,10 @@ const modules = import.meta.glob<Mod>("../content/blog/*.mdx", { eager: true });
 
 export const posts = Object.entries(modules)
   .map(([path, mod]) => {
-    const slug = path.split("/").pop()!.replace(/\.mdx$/, "");
+    const slug = path
+      .split("/")
+      .pop()!
+      .replace(/\.mdx$/, "");
     return { slug, Component: mod.default, meta: mod.meta ?? { title: slug, date: "" } };
   })
   .sort((a, b) => (a.meta.date < b.meta.date ? 1 : -1));
